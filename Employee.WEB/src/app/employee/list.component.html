@@ -1,0 +1,44 @@
+
+
+<div class="offset-9 col-md-2">
+  <button type="button" class="btn btn-link btn-sm btn-rounded" [routerLink]="['/addEmp']">
+    Add Employee
+  </button>
+
+</div>
+
+<div class="offset-1 col-md-9">
+
+
+  <div class="table-responsive">
+    <table class='table table-striped' *ngIf="employees?.length!==0">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>phoneNumber</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{employee.name}}</td>
+          <td>{{employee.email}}</td>
+          <td>{{employee.phoneNumber}}</td>
+          <td>
+             
+            <button type="button" class="btn btn-link btn-sm btn-rounded" [routerLink]="['/addEmp', employee.id]">
+              Update
+            </button>
+
+            <button type="button" class="btn btn-link btn-sm btn-rounded" (click)="delete(employee.id)">
+              Delete
+            </button>
+             
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+   
+</div>

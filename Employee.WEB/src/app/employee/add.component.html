@@ -1,0 +1,24 @@
+
+<div class="offset-1 col-md-9">
+
+  <form ngNativeValidate>
+    <h3>Add / Update Employee</h3>
+    <div class="form-group">
+      <label for="inputName">Name</label>
+      <input type="text" class="form-control" required [(ngModel)]="employeeObj.name" name="name" placeholder="Enter Name">
+    </div>
+    <div class="form-group">
+      <label for="inputEmail">Email</label>
+      <input type="text" class="form-control" required [(ngModel)]="employeeObj.email" name="email" placeholder="Enter Email">
+    </div>
+    <div class="form-group">
+      <label for="inputPhoneNumber">PhoneNumber</label>
+      <input type="text" class="form-control" required [(ngModel)]="employeeObj.phoneNumber" name="phoneNumber" placeholder="Enter PhoneNumber">
+    </div>
+
+    <div class="form-group m-1">
+      <button (click)="submitEmployee()" class="btn btn-primary ">Submit</button>
+    </div>
+  </form>
+
+</div>
